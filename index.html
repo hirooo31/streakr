@@ -8,35 +8,42 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --bg: #09090f;
-    --surface: #111118;
-    --card: #16161f;
+    --bg: #111118;
+    --surface: #1a1a24;
+    --card: #202030;
     --accent: #a78bfa;
     --accent2: #f472b6;
     --green: #34d399;
     --orange: #fb923c;
     --text: #f0eeff;
-    --muted: #52526e;
-    --border: rgba(167,139,250,0.1);
+    --muted: #6b6b8a;
+    --border: rgba(167,139,250,0.13);
   }
 
   body {
-    background: #050508;
+    background: var(--bg);
     font-family: -apple-system, 'Hiragino Sans', sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 40px 16px;
+    padding: 0;
   }
 
   .phone {
-    width: 390px;
+    width: 100%;
+    max-width: 430px;
     background: var(--bg);
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.06);
     overflow: hidden;
-    box-shadow: 0 40px 120px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.03);
+  }
+
+  @media (min-width: 500px) {
+    body { padding: 40px 16px; background: #05050a; }
+    .phone {
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.8);
+    }
   }
 
   /* ── Header ── */
